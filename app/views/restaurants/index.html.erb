@@ -1,0 +1,11 @@
+<h1>Resto index</h1>
+
+<ul>
+<% @restaurants.each do |restaurant|%>
+  <%= link_to restaurant_path(restaurant) do %>
+    <li><%= restaurant.name %> - <%= restaurant.address %> - <%= restaurant.category %></li>
+  <% end %>
+<% end %>
+</ul>
+
+<%= link_to 'Add a new resto', new_restaurant_path, class: "btn btn-primary" %>
